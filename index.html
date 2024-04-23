@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Genshin Impact Promotion</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/mihoyo_logo.png" alt="miHoYo Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#video">Game Trailer</a></li>
+                <li><a href="#characterInfo">Character Information</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </nav>
+        <div class="download-button">
+            <a href="#downloadSection">Download</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="centered-title">Welcome to Genshin Impact</h1>
+
+        <section id="video" class="container">
+            <h2>Game Trailer</h2>
+            <iframe src="https://www.youtube.com/embed/P6xGgOI3GWY?si=jzdUiuNZpbs7qmyx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section id="characterInfo" class="container">
+            <h2>Character Information</h2>
+            <div id="characterSearch">
+                <input type="text" id="searchInput" placeholder="Search character...">
+                <button onclick="searchCharacter()">Search</button>
+            </div>
+            <div id="characterImageWrapper">
+
+                <div id="characterImageContainer">
+                    <img id="characterImage" src="" alt="Character Image">
+                </div>
+
+            </div>
+            <div id="characterIndicators"></div>
+            <p id="characterName">Character Name</p>
+        </section>
+
+        <section id="events" class="container">
+            <h2>Upcoming Events</h2>
+            <ul id="eventList">
+                <li><a href="#">Windborne Bard Event</a></li>
+                <li><a href="#">Unreconciled Stars</a></li>
+                <li><a href="#">Ganyu Banner</a></li>
+            </ul>
+        </section>
+
+        <section id="downloadSection" class="container">
+            <h2>Download Genshin Impact</h2>
+            <img id="downloadQR" src="images/download.png" alt="Download QR Code" style="max-width:200px;">
+        </section>
+
+        <section id="feedback" class="container">
+            <h2>Feedback</h2>
+            <textarea id="feedbackInput" placeholder="Provide your feedback"></textarea>
+            <button onclick="showFeedbackDialog()">Submit Feedback</button>
+        </section>
+
+ 
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <h2>Subscribe to Updates</h2>
+                    <div class="subscribe-form">
+                        <input type="email" id="emailInput" placeholder="Enter your email">
+                        <p id="errorText" style="color: red;"></p>
+                        <button onclick="subscribe()">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+    <div id="downloadPopup" class="popup">
+    	<div class="popup-content">
+        	<p>Click the download button to download the file.</p>
+        	<button id="gotItButton">Got it</button>
+    	</div>
+     </div>
+</body>
+</html>
